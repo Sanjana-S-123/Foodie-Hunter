@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foodie Hunter | Sidebar Navigation Demo</title>
+  <link rel="stylesheet" href="index.html">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      background: #fff;
+      padding: 32px 0;
+      width: 220px;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .sidebar a {
+      display: block;
+      padding: 12px 32px;
+      color: #444;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      border-radius: 18px 0 0 18px;
+      transition: background 0.18s;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #ffe0b2;
+      color: #ea572a;
+      font-weight: bold;
+    }
+    .content-area {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .section-content {
+      background: #fff;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding: 32px 40px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      min-width: 340px;
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .sidebar { width: 100px; padding: 18px 0; }
+      .sidebar a { padding: 10px 8px; font-size: 1em; }
+      .section-content { min-width: 98vw; padding: 16px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <a href="#" onclick="showSection('about')" id="about-link" class="active">About</a>
+    <a href="Service.html" onclick="showSection('services')" id="services-link">Services</a>
+    <a href="#" onclick="showSection('orders')" id="orders-link">Your Orders</a>
+    
+    <a href="#" onclick="showSection('cart')" id="cart-link">Cart</a>
+    <a href="Contact.html" onclick="showSection('contact')" id="contact-link">Contact</a>
+    <a href="#" onclick="showSection('checkout')" id="checkout-link">Checkout</a>
+  </div>
+
+  <div class="content-area">
+    <div id="about-section" class="section-content" style="display:block;">
+      <h2>About Foodie Hunter</h2>
+      <p>Foodie Hunter delivers authentic, delicious meals to your door—fast, easy, and always fresh.</p>
+      <p><strong>Address:</strong> 123 Main Street, Bangalore, India<br>
+         <strong>Phone:</strong> +91 98765 43210</p>
+    </div>
+
+    
+    <!-- <div id="services-section" class="section-content">
+      <h2>Our Services</h2>
+      <p>Explore a wide range of cuisines and enjoy quick, reliable delivery every day.</p>
+    </div> -->
+    <div id="orders-section" class="section-content">
+      <h2>Your Orders</h2>
+      <p>Track, manage, and reorder your recent meals easily.</p>
+    </div>
+
+    
+    <div id="cart-section" class="section-content">
+      <h2>Cart</h2>
+      <p>Review your selected items before checkout.</p>
+    </div>
+    <div id="contact-section" class="section-content">
+      <h2>Contact Us</h2>
+      <p>Get in touch for support or feedback:<br>+91 98765 43210</p>
+    </div>
+    <div id="checkout-section" class="section-content">
+      <h2>Checkout</h2>
+      <p>Complete your order quickly and securely.</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(section) {
+      // Hide all sections
+      document.querySelectorAll('.section-content').forEach(sec => sec.style.display = 'none');
+      // Remove 'active' from all links
+      document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+      // Show the chosen section
+      document.getElementById(section + '-section').style.display = 'block';
+      // Add active to the currently clicked link
+      document.getElementById(section + '-link').classList.add('active');
+    }
+  </script>
+</body>
+</html>
