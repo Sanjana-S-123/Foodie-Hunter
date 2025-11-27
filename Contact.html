@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Foodie Hunter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+body {
+  background: #f8f8f8;
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background: #fff;
+  padding: 32px 0;
+  width: 220px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 32px;
+  color: #444;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  border-radius: 18px 0 0 18px;
+  transition: background 0.18s;
+  cursor: pointer;
+}
+
+.sidebar a:hover, 
+.sidebar a.active {
+  background: #ffe0b2;
+  color: #ea572a;
+  font-weight: bold;
+}
+
+/* Contact container styling */
+.contact-container {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  border-radius: 14px;
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 34px 26px;
+  text-align: center;
+  color: #353535;
+  flex-grow: 1; /* allows it to take rest of horizontal space next to sidebar */
+}
+
+.contact-title {
+  font-family: 'Aclonica', sans-serif;
+  color: #ff7043;
+  font-size: 2em;
+  margin-bottom: 12px;
+}
+
+.contact-lead {
+  font-size: 1.13em;
+  margin-bottom: 15px;
+  color: #4b4747;
+}
+
+/* Icon row in contact page */
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.icon-link {
+  color: #ea572a;
+  background: #fbe9e7;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.55em;
+  transition: background 0.18s, transform 0.18s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-link:hover,
+.icon-link:active {
+  background: #ff7043;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.contact-info {
+  color: #ea572a;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  /* Sidebar shrinks for smaller devices */
+  .sidebar {
+    width: 100px;
+    padding: 18px 0;
+  }
+  .sidebar a {
+    padding: 10px 8px;
+    font-size: 1em;
+  }
+
+  /* Contact container expands full width */
+  .contact-container {
+    max-width: 98vw;
+    margin: 20px 10px;
+    padding: 24px 16px;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="sidebar">
+    <a href="About.html" onclick="showSection('about')" id="about-link" class="active">About</a>
+    <a href="Service.html" onclick="showSection('services')" id="services-link">Services</a>
+    <a href="#" onclick="showSection('orders')" id="orders-link">Your Orders</a>
+    
+    <a href="#" onclick="showSection('cart')" id="cart-link">Cart</a>
+    <a href="#" onclick="showSection('contact')" id="contact-link">Contact</a>
+    <a href="#" onclick="showSection('checkout')" id="checkout-link">Checkout</a>
+  </div>
+  <div class="contact-container">
+    <div class="contact-title">Contact Us</div>
+    <div class="contact-lead">
+      Reach us instantly via your favorite platform for order support and feedback.
+    </div>
+    <div class="icon-row">
+      <a class="icon-link" href="mailto:support@foodiehunter.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a class="icon-link" href="sms:+919876543210" title="Message"><i class="fas fa-comment-alt"></i></a>
+      <a class="icon-link" href="https://t.me/foodiehunter" title="Telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a class="icon-link" href="https://twitter.com/foodiehunter" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a class="icon-link" href="https://wa.me/919876543210" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a class="icon-link" href="tel:+919876543210" title="Phone"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="contact-info">
+      <p><strong>Address:</strong> 123 Main Street, Bangalore</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> support@foodiehunter.com</p>
+    </div>
+  </div>
+</body>
+</html>

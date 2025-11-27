@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foodie Hunter Services</title>
+  <style>
+ /* General body styling */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background: #fff;
+  padding: 32px 0;
+  width: 220px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 32px;
+  color: #444;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  border-radius: 18px 0 0 18px;
+  transition: background 0.18s;
+  cursor: pointer; /* Added for UX */
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background: #ffe0b2;
+  color: #ea572a;
+  font-weight: bold;
+}
+
+/* Content area styling */
+.content-area {
+  flex: 2;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh; /* match sidebar height */
+}
+
+
+/* Section content styling */
+.section-content {
+  background: #fff;
+  margin: 40px 0;
+  padding: 32px 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  min-width: 340px;
+  display: none;
+}
+
+/* Service container styling */
+.service-container {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  max-width: 650px;
+  margin-top: 50px;
+  padding: 38px 36px;
+  color: #353535;
+}
+
+/* Service title styling */
+.service-title {
+  font-family: 'Aclonica', sans-serif;
+  color: #ff7043;
+  font-size: 2.2em;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+/* Service lead styling */
+.service-lead {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #4b4747;
+}
+
+/* Services list */
+ul.services-list {
+  padding-left: 22px;
+  margin-bottom: 24px;
+  list-style: none; /* Remove default bullets */
+}
+
+ul.services-list li {
+  font-size: 1.05em;
+  margin: 12px 0;
+  color: #2a2424;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 24px; /* spacing for custom bullet */
+}
+
+/* Custom bullet for list items */
+ul.services-list li::before {
+  content: "⦿";
+  color: #ff7043;
+  font-size: 1.15em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Service footer */
+.service-footer {
+  font-size: 1.14em;
+  margin-top: 28px;
+  color: #ea572a;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100px;
+    padding: 18px 0;
+  }
+  .sidebar a {
+    padding: 10px 8px;
+    font-size: 1em;
+  }
+  .section-content {
+    min-width: 98vw;
+    padding: 16px 8px;
+  }
+  .service-container {
+    padding: 18px 8px;
+    max-width: 97vw;
+  }
+  .service-title {
+    font-size: 1.2em;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="About.html" onclick="showSection('about')" id="about-link" class="active">About</a>
+    <a href="#" onclick="showSection('services')" id="services-link">Services</a>
+    <a href="#" onclick="showSection('orders')" id="orders-link">Your Orders</a>
+    <a href="#" onclick="showSection('cart')" id="cart-link">Cart</a>
+    <a href="Contact.html" onclick="showSection('contact')" id="contact-link">Contact</a>
+    <a href="#" onclick="showSection('checkout')" id="checkout-link">Checkout</a>
+  </div>
+
+  <div class="content-area">  <!-- Wrap service-container here -->
+    <div class="service-container">
+      <div class="service-title">Our Services</div>
+      <div class="service-lead">
+        Foodie Hunter offers a complete online food ordering and delivery experience designed for your convenience, safety, and satisfaction.
+      </div>
+      <ul class="services-list">
+        <li>Wide Selection: Browse diverse cuisine categories including biryanis, South Indian, Chinese, vegetarian, and more, curated for every taste and occasion.</li>
+        <li>Smart Search and Filter: Easily find dishes by name, category, rating, or price using our powerful search bar and menu filters.</li>
+        <li>Real-Time Order Tracking: Track your order from kitchen to doorstep, with live updates on preparation and delivery status.</li>
+        <li>Flexible Delivery Options: Choose home delivery, self-pickup, or schedule your order for a preferred time and location.</li>
+        <li>Safe and Secure Payments: Pay confidently with seamless checkout and multiple payment options—including card, wallet, and cash on delivery.</li>
+        <li>Order History and Reordering: View your previous orders, reorder favorites with one tap, and manage your account for a personalized experience.</li>
+        <li>Wishlist and Cart Management: Add items to your Wishlist for later, or to your Cart for immediate purchase and easy review before checkout.</li>
+        <li>Fast Support and Notifications: Get instant updates on discounts, special offers, and order changes; contact support easily for help at any stage.</li>
+        <li>Reliable Delivery Partners: Friendly, professional delivery staff ensure your food arrives fresh, hot, and on time, every time.</li>
+      </ul>
+      <div class="service-footer">
+        Foodie Hunter delivers more than food—we deliver reliability, convenience, and endless choices, every time you order.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
